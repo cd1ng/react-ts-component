@@ -1,0 +1,36 @@
+.alert{
+  width: 40%;
+  margin: 20px auto 0;
+  border-radius: .8rem;
+  vertical-align: middle;
+  padding:20px;
+  position: relative;
+  word-wrap: break-word;
+  cursor: pointer;
+  div::after{
+    content: "╳";
+    font-size: 20px;
+    position: absolute;
+    top:10px;
+    right:20px;
+    color: #fff;
+  }
+  p{
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  transition: height 1s linear;
+}
+.alert-default {
+  @include button-style($primary, $primary, $white)
+}
+.alert-success {
+  @include button-style($primary, $primary, $white)
+}
+.alert-warning {
+  @include button-style($primary, $primary, $white)
+}
+.alert-danger {
+  @include button-style($danger, $danger, $white)
+}
